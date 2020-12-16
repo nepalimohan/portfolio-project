@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Album example · Bootstrap</title>
+    <title>Mohan Nepali</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -48,15 +48,15 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Mohan Nepali</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Mohan Nepali</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="">Twitter
+          <a class="nav-link" href="https://www.facebook.com/mdeula/">Facebook
           <a class="nav-link" href="{% static 'resume.pdf' %}">Resume</a>
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
     </nav>
@@ -70,6 +70,7 @@
       <p class="lead text-muted">Hey there. Welcome to my website and this portfolio website is designed using django.</p>
         <a href="mailto:nepalimohan@outlook.com" class="btn btn-primary my-2">E-mail Me</a>
       </p>
+      <img class='img-fluid' height="400" width="200" src = "{% static 'DSC09382.jpg' %}" />
     </div>
   </section>
 
@@ -80,7 +81,7 @@
         {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src=" {{ job.image.url }}" alt="">
+            <img class="bd-placeholder-img card-img-top" width="200" height="200" src=" {{ job.image.url }}" alt="">
             <div class="card-body">
               <p class="card-text">{{ job.summary }}</p>
               </div>
